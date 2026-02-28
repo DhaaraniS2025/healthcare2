@@ -1,0 +1,116 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    min-height: 100vh;
+
+    background-image: url("lun.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+/* OPTIONAL DARK OVERLAY */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+body * {
+    position: relative;
+    z-index: 1;
+}
+
+/* CONTAINER */
+.container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 60px 40px;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 420px;   /* Instead of fixed width */
+    text-align: center;
+    color: #fff;
+    border: 2px solid #ff1e00;
+    box-shadow: 0 0 20px rgba(255, 94, 0, 0.6);
+    transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.container:hover {
+    background: rgba(120, 28, 0, 0.9);
+    box-shadow: 0 0 100px rgb(255, 47, 0);
+}
+
+/* HEADING */
+h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+/* FILE INPUT */
+input[type="file"] {
+    padding: 8px;
+    color: #fff;
+    width: 100%;
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #000;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #cc2200;
+    color: #fff;
+}
+
+/* HR */
+hr {
+    margin: 25px 0;
+    border: 0.5px solid #555;
+}
+
+/* RESULT */
+.result p {
+    margin: 8px 0;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 40px 25px;
+        border-radius: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

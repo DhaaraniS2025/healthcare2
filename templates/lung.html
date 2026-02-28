@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Tumor Detection</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='lung.css') }}">
+</head>
+
+<body>
+
+    <div class="outer-wrapper">
+        <div class="container">
+
+            <h1 id="fon"
+                class="animate__animated animate__pulse animate__infinite">
+                Lung Cancer Tumor Detection
+            </h1>
+
+            <h3 id="fon">Upload Your Scan</h3>
+
+            <input type="file" id="mammogram" accept="image/*">
+
+            <button onclick="analyzeImage()" id="btn">
+                Analyze
+            </button>
+
+            <p id="result"></p>
+            <div id="suggestions"></div>
+
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='lung.js') }}"></script>
+
+</body>
+</html>

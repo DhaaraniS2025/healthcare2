@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Detection using VBD</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cann.css') }}">
+</head>
+
+<body>
+
+    <div class="outer-wrapper">
+        <div class="container">
+            <h1 id="col" class="animate__animated animate__pulse animate__infinite">
+                Volumetric Breast Density (VBD) Calculator
+            </h1>
+
+            <form id="vbdForm">
+
+                <label id="col" for="totalVolume">
+                    Total Breast Volume (cm³):
+                </label>
+                <input type="text" id="totalVolume" required>
+
+                <label id="col" for="fibroglandularVolume">
+                    Fibroglandular Tissue Volume (cm³):
+                </label>
+                <input type="text" id="fibroglandularVolume" required>
+
+                <button type="submit">Calculate VBD</button>
+            </form>
+
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='cann.js') }}"></script>
+
+</body>
+</html>
